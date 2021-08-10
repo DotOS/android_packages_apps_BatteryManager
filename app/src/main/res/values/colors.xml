@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="green">#3DDC84</color>
+
+    <!-- Only for visualization purposes -->
+    <color name="monet_background_device_default">#fff</color>
+    <color name="monet_background_secondary_device_default">#efefef</color>
+
+    <color name="colorPrimary">@color/monet_background_device_default</color>
+    <color name="colorPrimaryDark">@color/monet_background_device_default</color>
+    <color name="colorAccent">@*android:color/accent_device_default_light</color>
+    <color name="colorPrimaryBackground">@color/monet_background_secondary_device_default</color>
+    <color name="pillColor">@color/monet_background_secondary_device_default</color>
+
+    <color name="cardBackground">@color/monet_background_secondary_device_default</color>
+    <color name="cardStrokeColor">#1f000000</color>
 </resources>

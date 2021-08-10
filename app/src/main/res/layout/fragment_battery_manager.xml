@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bmContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:backgroundTint="@color/colorPrimary">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/dashboardAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:animateLayoutChanges="true"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimary"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:background="@color/colorPrimary"
+            android:backgroundTint="@color/colorPrimary"
+            app:collapsedTitleTextAppearance="@style/Dashboard.Toolbar.Collapsed"
+            app:expandedTitleMarginStart="32dp"
+            app:expandedTitleTextAppearance="@style/Dashboard.Toolbar.Expanded"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:maxLines="2"
+            app:title="@string/app_name"
+            app:toolbarId="@+id/appTitle">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/appTitle"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:animateLayoutChanges="true"
+                android:theme="?android:attr/actionBarTheme"
+                android:title="@string/app_name"
+                android:titleTextAppearance="@style/Dashboard.Toolbar.Collapsed"
+                app:buttonGravity="center_vertical"
+                app:layout_collapseMode="pin" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/recyclerSpacer"
+                app:cardBackgroundColor="@color/cardBackground"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/cardStrokeColor"
+                app:strokeWidth="1dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/auto_awesome_battery" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.dot.lifesaver.views.DotMaterialPreference
+                android:id="@+id/adaptiveBattery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:summary="@string/adaptive_battery_summary"
+                android:title="@string/adaptive_battery" />
+
+            <TextView
+                android:id="@android:id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="32dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="32dp"
+                android:paddingBottom="16dp"
+                android:text="@string/battery_saver"
+                android:textAppearance="?android:attr/textAppearanceListItem"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.dot.lifesaver.views.DotMaterialPreference
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:summary="Battery saver profiles will extend even more the life of it but with a cost of performance."
+                android:title="@string/profiles" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/profileSelector"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_margin="@dimen/recyclerSpacer"
+                android:background="@drawable/circle_bg"
+                android:backgroundTint="@color/cardBackground"
+                app:tabIndicator="@drawable/circle_bg"
+                app:tabIndicatorColor="@color/colorAccent"
+                app:tabIndicatorFullWidth="true"
+                app:tabIndicatorHeight="56dp"
+                app:tabTextAppearance="@style/Dashboard.TabLayout.Item">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pref_profile_title_default" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pref_profile_title_moderate" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pref_profile_title_high" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pref_profile_title_extreme" />
+            </com.google.android.material.tabs.TabLayout>
+
+            <com.dot.lifesaver.views.DotMaterialPreference
+                android:id="@+id/customize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:summary="Customize the profile"
+                android:tint="@color/colorAccent" />
+
+            <com.dot.lifesaver.views.DotMaterialPreference
+                android:id="@+id/batterySaver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:summary="@string/enable_battery_saver_summary"
+                android:title="@string/enable_battery_saver"
+                app:showDivider="true" />
+
+            <com.dot.lifesaver.views.DotMaterialPreference
+                android:id="@+id/scheduleSaver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:summary="@string/no_schedule"
+                android:title="@string/set_a_schedule" />
+
+            <com.dot.lifesaver.views.DotMaterialPreference
+                android:id="@+id/stickyTurnoff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:summary="@string/turn_off_when_charged_summary"
+                android:title="@string/turn_off_when_charged" />
+
+            <com.dot.lifesaver.views.DotMaterialPreference
+                android:id="@+id/stickyLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:summary="@string/auto_turn_off_level_summary"
+                android:title="@string/auto_turn_off_level"
+                app:seekable="true">
+
+            </com.dot.lifesaver.views.DotMaterialPreference>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="32dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="32dp"
+                android:paddingBottom="16dp"
+                android:text="@string/charging_options"
+                android:textAppearance="?android:attr/textAppearanceListItem"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.dot.lifesaver.views.DotMaterialPreference
+                android:id="@+id/smartChargingFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:summary="@string/smart_charging_summary"
+                android:title="@string/smart_charging_title" />
+
+            <com.dot.lifesaver.views.DotMaterialPreference
+                android:id="@+id/smartCutoffFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:summary="@string/smart_cutoff_summary"
+                android:title="@string/smart_cutoff_title" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DotMaterialPreference">
+        <attr name="android:icon" format="reference" />
+        <attr name="android:title" format="string|reference" />
+        <attr name="android:summary" format="string|reference" />
+        <attr name="android:checkable" format="boolean|reference" />
+        <attr name="android:checked" format="boolean|reference" />
+        <attr name="cardStyle" format="boolean|reference" />
+        <attr name="android:tint" format="color|reference" />
+        <attr name="seekable" format="boolean|reference" />
+        <attr name="android:max" format="integer|reference" />
+        <attr name="android:min" format="integer|reference" />
+        <attr name="android:progress" format="integer|reference" />
+        <attr name="showDivider" format="boolean|reference" />
+    </declare-styleable>
+</resources>

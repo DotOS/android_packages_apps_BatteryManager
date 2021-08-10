@@ -1,59 +1,22 @@
-<resources>
-    <string name="app_name">Buoy</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Battery Manager</string>
 
-    <string name="title_permission">Permissions</string>
-
-    <string name="permission_title">Woah there!</string>
-    <string name="permission_message">We need a special permission to continue. Use ADB to run the following command (one line):</string>
-    <string name="permission_command">adb shell pm grant com.draco.buoy android.permission.WRITE_SECURE_SETTINGS</string>
-
-    <string name="please_wait">Waiting for permission</string>
-    <string name="copied">Copied to clipboard</string>
-
-    <string name="snackbar_intent_failed">Could not handle this action</string>
     <string name="snackbar_failed_to_apply">Failed to apply; device is likely incompatible</string>
-    <string name="snackbar_low_power">Changes will take effect when device is in battery saver mode</string>
-    <string name="snackbar_applied">Successfully applied profile</string>
-    <string name="snackbar_reset">Successfully reset profile</string>
 
-    <string name="developer_url">https://www.github.com/tytydraco</string>
-    <string name="source_url">https://www.github.com/tytydraco/Buoy</string>
-    <string name="contact_url">mailto:tylernij@gmail.com</string>
-
-    <string name="export_share_title">Battery Saver Constants</string>
-
-    <string name="category_profiles">Profiles</string>
-    <string name="category_share">Share</string>
-    <string name="category_about">About</string>
-    <string name="category_config">Configuration</string>
-
-    <string name="pref_profile_key_default">default</string>
     <string name="pref_profile_title_default">Default</string>
-    <string name="pref_profile_summary_default">Use the device\'s default battery saver settings</string>
 
     <string name="pref_profile_key_light">light</string>
-    <string name="pref_profile_title_light">Light</string>
-    <string name="pref_profile_summary_light">Marginal conservation of battery power which barely affects the user experience</string>
 
     <string name="pref_profile_key_moderate">moderate</string>
     <string name="pref_profile_title_moderate">Moderate</string>
-    <string name="pref_profile_summary_moderate">Balanced set of tweaks to conserve battery life while not hurting performance</string>
 
     <string name="pref_profile_key_high">high</string>
     <string name="pref_profile_title_high">High</string>
-    <string name="pref_profile_summary_high">Aggressive reduction in power consumption with significant performance loss</string>
 
     <string name="pref_profile_key_extreme">extreme</string>
     <string name="pref_profile_title_extreme">Extreme</string>
-    <string name="pref_profile_summary_extreme">Ultimate set of tweaks to save as much power as possible</string>
-
-    <string name="pref_key_export">export</string>
-    <string name="pref_title_export">Export</string>
-    <string name="pref_summary_export">Share the battery saver constants elsewhere</string>
 
     <string name="pref_key_import">import</string>
-    <string name="pref_title_import">Import</string>
-    <string name="pref_summary_import">Configure using a new profile</string>
 
     <string name="pref_config_key_advertise_is_enabled">advertise_is_enabled</string>
     <string name="pref_config_title_advertise_is_enabled">Advertise power saver</string>
@@ -127,19 +90,39 @@
     <string name="pref_config_title_quick_doze_enabled">Quick doze enabled</string>
     <string name="pref_config_summary_quick_doze_enabled">Enter deep sleep as soon as the screen is turned off</string>
 
-    <string name="pref_developer_title">Developer</string>
-    <string name="pref_developer_summary">Tyler Nijmeh</string>
-    <string name="pref_developer_key">developer</string>
-
-    <string name="pref_source_title">Source code</string>
-    <string name="pref_source_summary">Check out this project on GitHub</string>
-    <string name="pref_source_key">source</string>
-
-    <string name="pref_contact_title">Contact</string>
-    <string name="pref_contact_summary">Email me with questions, comments, and concerns</string>
-    <string name="pref_contact_key">contact</string>
-
-    <string name="pref_licenses_title">Licenses</string>
-    <string name="pref_licenses_summary">View the open source licenses</string>
     <string name="pref_licenses_key">licenses</string>
+
+    <string name="profile_customization">Profile Customization</string>
+    <string name="battery_saver_sticky_description_new" product="default">Battery Saver turns off when your phone is at <xliff:g id="percent" example="90%">%1$s</xliff:g></string>
+
+    <!-- Smart charging -->
+    <string name="smart_charging_title">Smart charging</string>
+    <string name="smart_charging_summary">Set maximum charging level</string>
+    <string name="smart_charging_switch_title">Use Smart charging</string>
+    <string name="smart_charging_level_title">Stop trigger level</string>
+    <string name="smart_charging_resume_level_title">Start trigger level</string>
+    <string name="smart_charging_reset_stats_title">Reset battery statistics</string>
+    <string name="smart_charging_reset_stats_summary">Reset battery statistics after reaching user defined charging level</string>
+    <string name="smart_charging_footer">Smart Charging allows you to set maximum charging level to extend the lifespan of your battery</string>
+
+    <!-- Smart cutoff -->
+    <string name="smart_cutoff_title">Smart cutoff</string>
+    <string name="smart_cutoff_summary">Set maximum temperature</string>
+    <string name="smart_cutoff_switch_title">Use Smart cutoff</string>
+    <string name="smart_cutoff_level_title">Stop trigger level</string>
+    <string name="smart_cutoff_resume_level_title">Start trigger level</string>
+    <string name="adaptive_battery">Adaptive Battery</string>
+    <string name="adaptive_battery_summary">Limit battery for apps that you don\'t use often</string>
+    <string name="battery_saver">Battery Saver</string>
+    <string name="profiles">Profiles</string>
+    <string name="enable_battery_saver">Enable battery saver</string>
+    <string name="enable_battery_saver_summary">Extends battery life by disabling/restricting background activity, some visual effects, and other features like Hey Google.</string>
+    <string name="set_a_schedule">Set a schedule</string>
+    <string name="no_schedule">No schedule</string>
+    <string name="turn_off_when_charged">Turn off when charged</string>
+    <string name="turn_off_when_charged_summary">Battery Saver turns off when your phone is at %s%</string>
+    <string name="auto_turn_off_level">Auto turn off level</string>
+    <string name="auto_turn_off_level_summary">At what percentage should the battery saver be automatically turned off</string>
+    <string name="charging_options">Charging Options</string>
+
 </resources>
