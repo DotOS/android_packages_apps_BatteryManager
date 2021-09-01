@@ -38,15 +38,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <com.dot.lifesaver.views.DotMaterialPreference
+            <com.dot.ui.DotMaterialPreference
                 android:id="@+id/smartChargingSwitch"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:checkable="true"
                 android:summary="@string/smart_charging_footer"
-                android:title="@string/smart_charging_switch_title" />
+                android:title="@string/smart_charging_switch_title"
+                app:newStyle="true" />
 
-            <com.dot.lifesaver.views.DotMaterialPreference
+            <com.dot.ui.DotMaterialPreference
                 android:id="@+id/smartChargingStopTrigger"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -54,9 +55,10 @@
                 android:min="65"
                 android:progress="80"
                 android:title="@string/smart_charging_level_title"
+                app:newStyle="true"
                 app:seekable="true" />
 
-            <com.dot.lifesaver.views.DotMaterialPreference
+            <com.dot.ui.DotMaterialPreference
                 android:id="@+id/smartChargingStartTrigger"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -64,15 +66,17 @@
                 android:min="1"
                 android:progress="60"
                 android:title="@string/smart_charging_resume_level_title"
+                app:newStyle="true"
                 app:seekable="true" />
 
-            <com.dot.lifesaver.views.DotMaterialPreference
+            <com.dot.ui.DotMaterialPreference
                 android:id="@+id/smartChargingResetStats"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:checkable="true"
                 android:summary="@string/smart_charging_reset_stats_summary"
-                android:title="@string/smart_charging_reset_stats_title" />
+                android:title="@string/smart_charging_reset_stats_title"
+                app:newStyle="true" />
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

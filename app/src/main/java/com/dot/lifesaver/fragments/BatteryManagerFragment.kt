@@ -26,8 +26,7 @@ class BatteryManagerFragment : Fragment(R.layout.fragment_battery_manager),
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        appTitle.setNavigationIcon(R.drawable.ic_arrow_back)
-        appTitle.setNavigationOnClickListener { requireActivity().onBackPressed() }
+        dashboardAppBar.canGoBack(requireActivity())
 
         adaptiveBattery.setChecked(batterySaverManager.getSmartBattery())
         adaptiveBattery.setOnCheckListener { _, isChecked ->

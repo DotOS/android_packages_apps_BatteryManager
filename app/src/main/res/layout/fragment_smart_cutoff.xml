@@ -38,14 +38,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <com.dot.lifesaver.views.DotMaterialPreference
+            <com.dot.ui.DotMaterialPreference
                 android:id="@+id/smartCutoffSwitch"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:checkable="true"
-                android:title="@string/smart_cutoff_switch_title" />
+                android:title="@string/smart_cutoff_switch_title"
+                app:newStyle="true" />
 
-            <com.dot.lifesaver.views.DotMaterialPreference
+            <com.dot.ui.DotMaterialPreference
                 android:id="@+id/smartCutoffStopTrigger"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -53,9 +54,10 @@
                 android:min="25"
                 android:progress="30"
                 android:title="@string/smart_cutoff_level_title"
+                app:newStyle="true"
                 app:seekable="true" />
 
-            <com.dot.lifesaver.views.DotMaterialPreference
+            <com.dot.ui.DotMaterialPreference
                 android:id="@+id/smartCutoffStartTrigger"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -63,6 +65,7 @@
                 android:min="20"
                 android:progress="25"
                 android:title="@string/smart_cutoff_resume_level_title"
+                app:newStyle="true"
                 app:seekable="true" />
 
         </LinearLayout>

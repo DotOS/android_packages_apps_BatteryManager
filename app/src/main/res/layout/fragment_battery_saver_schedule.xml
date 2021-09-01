@@ -65,7 +65,7 @@
                 tools:itemCount="3"
                 tools:listitem="@layout/item_list_object" />
 
-            <com.dot.lifesaver.views.DotMaterialPreference
+            <com.dot.ui.DotMaterialPreference
                 android:id="@+id/schedulePercentage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -73,6 +73,7 @@
                 android:min="1"
                 android:title="Percentage Schedule"
                 android:visibility="gone"
+                app:newStyle="true"
                 app:seekable="true"
                 tools:visibility="visible" />
         </LinearLayout>
