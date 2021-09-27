@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.dot.lifesaver.R
 import com.dot.lifesaver.repositories.profiles.BatterySaverConstantsConfigProfiles
 import com.dot.lifesaver.utils.BatterySaverManager
+import com.dot.ui.utils.ResourceHelper
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.fragment_battery_manager.*
 
@@ -80,6 +81,7 @@ class BatteryManagerFragment : Fragment(R.layout.fragment_battery_manager),
         smartCutoffFragment.setOnClickPreference {
             SmartCutoffFragment().show(parentFragmentManager, "smartCutoff")
         }
+        smartChargingLayout.setExpanded(ResourceHelper.getInternalBool("config_smartChargingVisibility", requireContext()), false)
     }
 
     override fun onTabSelected(tab: TabLayout.Tab) {

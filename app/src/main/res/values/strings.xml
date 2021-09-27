@@ -117,7 +117,7 @@
     <string name="profiles">Profiles</string>
     <string name="enable_battery_saver">Enable battery saver</string>
     <string name="enable_battery_saver_summary">Extends battery life by disabling/restricting background activity, some visual effects, and other features like Hey Google.</string>
-    <string name="set_a_schedule">Set a schedule</string>
+    <string name="battery_schedule">Battery Saver Schedule</string>
     <string name="no_schedule">No schedule</string>
     <string name="turn_off_when_charged">Turn off when charged</string>
     <string name="turn_off_when_charged_summary">Battery Saver turns off when your phone is at %s%</string>

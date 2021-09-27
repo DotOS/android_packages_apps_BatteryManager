@@ -129,8 +129,7 @@
                 android:id="@+id/scheduleSaver"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:summary="@string/no_schedule"
-                android:title="@string/set_a_schedule"
+                android:title="@string/battery_schedule"
                 app:newStyle="true" />
 
             <com.dot.ui.DotMaterialPreference
@@ -153,32 +152,49 @@
 
             </com.dot.ui.DotMaterialPreference>
 
-            <TextView
+            <com.dot.ui.ExpandableLayout
+                android:id="@+id/smartChargingLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="32dp"
-                android:paddingTop="16dp"
-                android:paddingEnd="32dp"
-                android:paddingBottom="16dp"
-                android:text="@string/charging_options"
-                android:textAppearance="?android:attr/textAppearanceListItem"
-                android:textColor="?android:attr/textColorPrimary"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                app:el_expanded="false">
 
-            <com.dot.ui.DotMaterialPreference
-                android:id="@+id/smartChargingFragment"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:summary="@string/smart_charging_summary"
-                android:title="@string/smart_charging_title" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <com.dot.ui.DotMaterialPreference
-                android:id="@+id/smartCutoffFragment"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:summary="@string/smart_cutoff_summary"
-                android:title="@string/smart_cutoff_title" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="32dp"
+                        android:paddingTop="16dp"
+                        android:paddingEnd="32dp"
+                        android:paddingBottom="16dp"
+                        android:text="@string/charging_options"
+                        android:textAppearance="?android:attr/textAppearanceListItem"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <com.dot.ui.DotMaterialPreference
+                        android:id="@+id/smartChargingFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:summary="@string/smart_charging_summary"
+                        android:title="@string/smart_charging_title"
+                        app:newStyle="true" />
+
+                    <com.dot.ui.DotMaterialPreference
+                        android:id="@+id/smartCutoffFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:summary="@string/smart_cutoff_summary"
+                        android:title="@string/smart_cutoff_title"
+                        app:newStyle="true" />
+
+                </LinearLayout>
+
+            </com.dot.ui.ExpandableLayout>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
